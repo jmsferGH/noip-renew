@@ -72,7 +72,7 @@ class Robot:
 
         self.logger.log("Logging in...")
         ele_usr = self.browser.find_element(By.NAME, "username")
-        ele_pwd = self.browser.find_element(By.NAMW, "password")
+        ele_pwd = self.browser.find_element(By.NAME, "password")
         ele_usr.send_keys(self.username)
         ele_pwd.send_keys(base64.b64decode(self.password).decode('utf-8'))
         self.browser.find_element(By.ID,"clogs-captcha-button").click()
